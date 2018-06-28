@@ -1,4 +1,4 @@
-package hello.repository.news;
+package hello.model.news;
 
 import org.springframework.data.repository.CrudRepository;
 

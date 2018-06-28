@@ -1,4 +1,4 @@
-package hello.repository.news;
+package hello.model.news;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

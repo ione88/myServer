@@ -1,4 +1,4 @@
-package hello.repository.user;
+package hello.model.user;
 
 import org.springframework.data.repository.CrudRepository;
 

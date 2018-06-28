@@ -15,7 +15,7 @@ apply plugin: 'io.spring.dependency-management'
 
 bootJar {
     baseName = 'myServer'
-    version =  '0.1.0'
+    version = '0.1.0'
 }
 
 repositories {
@@ -33,5 +33,13 @@ dependencies {
 
     // Use MySQL Connector-J
     compile 'mysql:mysql-connector-java'
+
+    // https://mvnrepository.com/artifact/org.glassfish.grizzly/grizzly-framework
+    compile group: 'org.glassfish.grizzly', name: 'grizzly-framework', version: '2.4.3'
+    // https://mvnrepository.com/artifact/org.glassfish.grizzly/grizzly-http
+    compile group: 'org.glassfish.grizzly', name: 'grizzly-http', version: '2.4.3'
+// https://mvnrepository.com/artifact/org.glassfish.grizzly/grizzly-http-all
+    compile group: 'org.glassfish.grizzly', name: 'grizzly-http-all', version: '2.4.3'
+
 }
 
