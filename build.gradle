@@ -33,7 +33,5 @@ dependencies {
 
     // Use MySQL Connector-J
     compile 'mysql:mysql-connector-java'
-
-    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
