@@ -11,7 +11,7 @@ public class YandexNews {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
-    private String update;
+    private String updated;
 
     private String title;
 
@@ -28,11 +28,11 @@ public class YandexNews {
 	}
 
 	public String getUpdate() {
-		return update;
+		return updated;
 	}
 
-	public void setUpdate(String update) {
-		this.update = update;
+	public void setUpdate(String updated) {
+		this.updated = updated;
 	}
 
 	public String getTitle() {
