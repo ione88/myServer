@@ -15,7 +15,7 @@ public class DnsProductController {
 	private DnsProductRepository dnsProductRepository;
 	//private UserService userService;
 
-	@PostMapping(path="/add", consumes = "application/json", produces = "text/plain") // Map ONLY POST Requests
+	@PutMapping(path="/add", consumes = "application/json", produces = "text/plain") // Map ONLY POST Requests
 	public @ResponseBody String createDnsProduct (@RequestBody DnsProduct dnsProduct) {
 		DnsProduct dnsProductPersist = dnsProductRepository.findByCode(dnsProduct.getCode());
 		if (dnsProductPersist == null) {

@@ -15,7 +15,7 @@ public class DnsProductAvailableController {
 	private DnsProductAvailableRepository dnsProductAvailableRepository;
 	//private UserService userService;
 
-	@PostMapping(path="/add", consumes = "application/json", produces = "text/plain") // Map ONLY POST Requests
+	@PutMapping(path="/add", consumes = "application/json", produces = "text/plain") // Map ONLY POST Requests
 	public @ResponseBody String createDnsProductAvailable (@RequestBody DnsProductAvailable dnsProductAvailable) {
 		DnsProductAvailable dnsProductAvailablePersist = dnsProductAvailableRepository.findByCodeAndCityAndShop(dnsProductAvailable.getCode(), dnsProductAvailable.getCity(), dnsProductAvailable.getShop());
 		if (dnsProductAvailablePersist == null) {
