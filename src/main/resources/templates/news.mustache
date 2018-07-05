@@ -1,0 +1,17 @@
+<html>
+
+<body>
+    <div>Поиск новостей</div>
+    <form method="post" action="/news/filter" >
+        <input type="text" name="filter" placeholder="Пустая строка - все новости">
+        <button type="submit">Найти</button>
+    </form>
+
+    {{#news}}
+        <div>
+            <b><a href={{url}}>{{type}}</a></b>
+            <span>{{title}}</span>
+        </div>
+    {{/news}}
+</body>
+</html>

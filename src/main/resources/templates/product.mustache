@@ -1,0 +1,17 @@
+<html>
+
+<body>
+    <div>Поиск товаров</div>
+    <form method="post"  action="/product/filter" >
+        <input type="text" name="filter" placeholder="Пустая строка - все товары">
+        <button type="submit">Найти</button>
+    </form>
+
+    {{#product}}
+        <div>
+            <b><a href={{url}}>{{name}}</a></b>
+            <span>{{description}}</span>
+        </div>
+    {{/product}}
+</body>
+</html>
