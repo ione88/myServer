@@ -1,12 +1,11 @@
-package hello.model.user;
+package com.ione88.myServer.service.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity // This tells Hibernate to make a table out of this class
-public class User {
+@Entity
+@Table(name = "user")
+public // This tells Hibernate to make a table out of this class
+class User {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
@@ -38,7 +37,7 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-    
-    
+
+
 }
 

@@ -1,17 +1,24 @@
-package hello.model.news;
+package com.ione88.myServer.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity // This tells Hibernate to make a table out of this class
-public class YandexNews {
+public class YandexNews  {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
-    private String updated;
+	@Column
+	@CreationTimestamp
+	private LocalDateTime created;
+
+	@Column
+	@UpdateTimestamp
+    private LocalDateTime updated;
 
     private String title;
 
@@ -27,11 +34,20 @@ public class YandexNews {
 		this.id = id;
 	}
 
-	public String getUpdate() {
+
+	public LocalDateTime getCreated() {
+		return created;
+	}
+
+	public void setCreated(LocalDateTime created) {
+		this.created = created;
+	}
+
+	public LocalDateTime getUpdated() {
 		return updated;
 	}
 
-	public void setUpdate(String updated) {
+	public void setUpdated(LocalDateTime updated) {
 		this.updated = updated;
 	}
 
@@ -42,6 +58,7 @@ public class YandexNews {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 
 	public String getUrl() {
 		return url;
@@ -59,5 +76,7 @@ public class YandexNews {
 		this.type = type;
 	}
 
+	public YandexNews() {
+	}
 }
 
