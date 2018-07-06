@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity // This tells Hibernate to make a table out of this class
+@Table(name = "yandex_news")
 public class YandexNews  {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)

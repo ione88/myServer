@@ -10,6 +10,7 @@ import java.util.List;
 
 public interface YandexNewsRepository extends JpaRepository<YandexNews, Long> {
     List<YandexNews> findByTitleContaining(String title);
-
+    List<YandexNews> findByType(String type);
     YandexNews findByTitle(String title);
+
 }
