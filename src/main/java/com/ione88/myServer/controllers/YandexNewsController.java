@@ -29,8 +29,7 @@ public class YandexNewsController {
     }
 
     @PutMapping(path = "/add", consumes = "application/json", produces = "application/json") // Map ONLY PUT Requests
-    public @ResponseBody
-    String createYandexNews(@RequestBody YandexNews yandexNews) {
+    public @ResponseBody String createYandexNews(@RequestBody YandexNews yandexNews) {
         return yandexNewsService.createYandexNews(yandexNews);
     }
 
