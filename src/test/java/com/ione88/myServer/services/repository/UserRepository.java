@@ -1,6 +1,6 @@
-package com.ione88.myServer.service.repository;
+package com.ione88.myServer.services.repository;
 
-import com.ione88.myServer.service.entity.User;
+import com.ione88.myServer.services.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 // This will be AUTO IMPLEMENTED by Spring into a Bean called userRepository

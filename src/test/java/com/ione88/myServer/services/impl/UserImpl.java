@@ -1,8 +1,8 @@
-package com.ione88.myServer.service.impl;
+package com.ione88.myServer.services.impl;
 
-import com.ione88.myServer.service.entity.User;
-import com.ione88.myServer.service.UserService;
-import com.ione88.myServer.service.repository.UserRepository;
+import com.ione88.myServer.services.entity.User;
+import com.ione88.myServer.services.UserService;
+import com.ione88.myServer.services.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

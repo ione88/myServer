@@ -1,4 +1,4 @@
-package com.ione88.myServer.entity;
+package com.ione88.myServer.entities;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;

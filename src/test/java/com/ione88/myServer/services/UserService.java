@@ -1,6 +1,6 @@
-package com.ione88.myServer.service;
+package com.ione88.myServer.services;
 
-import com.ione88.myServer.service.entity.User;
+import com.ione88.myServer.services.entity.User;
 
 public interface UserService {
 

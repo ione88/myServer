@@ -1,7 +1,6 @@
-package com.ione88.myServer.entity;
+package com.ione88.myServer.entities;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 
 @Entity
 @Table(name = "dns_product")

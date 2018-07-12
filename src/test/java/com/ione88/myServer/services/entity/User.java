@@ -1,4 +1,4 @@
-package com.ione88.myServer.service.entity;
+package com.ione88.myServer.services.entity;
 
 import javax.persistence.*;
 

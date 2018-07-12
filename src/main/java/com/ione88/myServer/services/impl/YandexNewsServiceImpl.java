@@ -1,8 +1,8 @@
-package com.ione88.myServer.service.impl;
+package com.ione88.myServer.services.impl;
 
-import com.ione88.myServer.entity.YandexNews;
-import com.ione88.myServer.repository.YandexNewsRepository;
-import com.ione88.myServer.service.YandexNewsService;
+import com.ione88.myServer.entities.YandexNews;
+import com.ione88.myServer.repositories.YandexNewsRepository;
+import com.ione88.myServer.services.YandexNewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,12 +12,8 @@ import java.util.List;
 @Service
 public class YandexNewsServiceImpl implements YandexNewsService {
 
-    private YandexNewsRepository yandexNewsRepository;
-
     @Autowired
-    public void setProductRepository(YandexNewsRepository yandexNewsRepository) {
-        this.yandexNewsRepository = yandexNewsRepository;
-    }
+    private YandexNewsRepository yandexNewsRepository;
 
     @Override
     public String createYandexNews(YandexNews yandexNews) {

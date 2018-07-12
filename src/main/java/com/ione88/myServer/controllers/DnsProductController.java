@@ -1,7 +1,7 @@
-package com.ione88.myServer.controller;
+package com.ione88.myServer.controllers;
 
-import com.ione88.myServer.entity.DnsProduct;
-import com.ione88.myServer.service.DnsProductService;
+import com.ione88.myServer.entities.DnsProduct;
+import com.ione88.myServer.services.DnsProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -12,11 +12,8 @@ import java.util.Map;
 
 @RequestMapping(path="/product") // This means URL's start with /demo (after Application path)
 public class DnsProductController {
-	private DnsProductService dnsProductService;
 	@Autowired
-    public void setDnsProductController(DnsProductService dnsProductService) {
-        this.dnsProductService = dnsProductService;
-    }
+	private DnsProductService dnsProductService;
 
 	@GetMapping
 	public String product(Map<String, Object> model) {

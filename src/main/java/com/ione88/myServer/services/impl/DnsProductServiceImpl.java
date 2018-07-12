@@ -1,8 +1,8 @@
-package com.ione88.myServer.service.impl;
+package com.ione88.myServer.services.impl;
 
-import com.ione88.myServer.entity.DnsProduct;
-import com.ione88.myServer.repository.DnsProductRepository;
-import com.ione88.myServer.service.DnsProductService;
+import com.ione88.myServer.entities.DnsProduct;
+import com.ione88.myServer.repositories.DnsProductRepository;
+import com.ione88.myServer.services.DnsProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,12 +11,8 @@ import java.util.List;
 @Service
 public class DnsProductServiceImpl implements DnsProductService {
 
-    private DnsProductRepository dnsProductRepository;
-
     @Autowired
-    public void setDnsProductRepository(DnsProductRepository dnsProductRepository){
-        this.dnsProductRepository = dnsProductRepository;
-    }
+    private DnsProductRepository dnsProductRepository;
 
     @Override
     public String createDnsProduct(DnsProduct dnsProduct) {

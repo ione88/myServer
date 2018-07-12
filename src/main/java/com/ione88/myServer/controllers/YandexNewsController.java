@@ -1,7 +1,7 @@
-package com.ione88.myServer.controller;
+package com.ione88.myServer.controllers;
 
-import com.ione88.myServer.entity.YandexNews;
-import com.ione88.myServer.service.YandexNewsService;
+import com.ione88.myServer.entities.YandexNews;
+import com.ione88.myServer.services.YandexNewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -12,11 +12,9 @@ import java.util.Map;
 @Controller    // This means that this class is a Controller
 @RequestMapping(path = "/news") // This means URL's start with /demo (after Application path)
 public class YandexNewsController {
-    private YandexNewsService yandexNewsService;
     @Autowired
-    public void setYandexNewsController(YandexNewsService yandexNewsService) {
-        this.yandexNewsService = yandexNewsService;
-    }
+    private YandexNewsService yandexNewsService;
+
 
     @GetMapping
     public String news(Map<String, Object> model) {

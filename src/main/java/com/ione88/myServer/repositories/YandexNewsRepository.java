@@ -1,13 +1,12 @@
-package com.ione88.myServer.repository;
+package com.ione88.myServer.repositories;
 
-import com.ione88.myServer.entity.YandexNews;
+import com.ione88.myServer.entities.YandexNews;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-// This will be AUTO IMPLEMENTED by Spring into a Bean called userRepository
-// CRUD refers Create, Read, Update, Delete
-
+@Repository("YandexNewsRepository")
 public interface YandexNewsRepository extends JpaRepository<YandexNews, Long> {
     List<YandexNews> findByTitleContaining(String title);
     List<YandexNews> findByType(String type);
