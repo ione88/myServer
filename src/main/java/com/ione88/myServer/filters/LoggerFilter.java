@@ -20,7 +20,6 @@ public class LoggerFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response,
                          FilterChain chain) throws IOException, ServletException {
         // добавить в базу сообщение, что пришёл новый запрос на сервер.
-
         loggerService.createLogger(new Logger("INFO","getParameterMap: " + new Gson().toJson(request.getParameterMap())));
         chain.doFilter(request,response);
     }
